@@ -15,10 +15,14 @@ if __name__ == '__main__':
     app = QApplication([])      # 初始化QApplication
 
     window = QMainWindow()
+    # 主界面的长宽
     window.resize(500, 400)
+    # move决定位置：此时主窗口在 相对屏幕左上角x=300 y=310的位置
     window.move(300, 310)
     window.setWindowTitle('薪资统计')
 
+    # QT系统中，控件(widget)是层层嵌套的
+    # 这里的window表明TextEdit的父控件对象是window
     textEdit = QPlainTextEdit(window)
     textEdit.setPlaceholderText("请输入薪资表")
     textEdit.move(10,25)
