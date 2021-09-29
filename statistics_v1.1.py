@@ -1,6 +1,6 @@
 '''
 Version 1.1
-add response and handel function
+add response and handle function
 '''
 
 import sys
