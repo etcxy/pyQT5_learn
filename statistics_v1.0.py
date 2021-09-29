@@ -1,5 +1,5 @@
 '''
-Version 1.1
+Version 1.0
 Realize window, text edit, button 
 
 QApplication：
@@ -8,7 +8,9 @@ QApplication：
 后面三个控件分别对应界面的主窗口、文本框、按钮
 '''
 
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton,  QPlainTextEdit
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QPushButton, QPlainTextEdit
 
 if __name__ == '__main__':
 
@@ -31,6 +33,11 @@ if __name__ == '__main__':
     button = QPushButton('统计', window)
     button.move(380,80)
 
+    # 放在主窗口的控件，要能全部显示在界面上，必须show一下
     window.show()
 
-    app.exec_()
+    # app.exec_()是QApplication类的方法
+    # 它的作用是 进入程序的主循环知道exit()被调用
+    # app.exec_()
+    # 建议使用下面这种方式
+    sys.exit(app.exec_())
